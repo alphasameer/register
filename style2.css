@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' ,sans-serif;
+}
+
+body{
+   display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(img/river2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+
+    position: fixed;
+    top:0;
+    left:0;
+    background:none;
+    width: 100%;
+    padding: 20px 100px;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 99;
+}
+.form-box h2{
+    font-size: 2rem;
+    color:#162938;
+    user-select: none;
+    text-align: center;
+    font-weight: 600;
+}
+.navigation a{
+    position: relative;
+    margin-left: 40px;
+    font-size: 1.2rem;
+    color:black;
+    text-decoration: none;
+    font-weight: 500;
+}
+.navigation .login{
+    width:90px;
+    height:40px;
+    background: transparent;
+    border:2px solid black;
+    font-size: 1.2rem;
+    color:black;
+    border-radius: 6px;
+    font-weight: 500;
+    outline: none;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.navigation .login:hover{
+    background: #fff;
+    color:black;
+}
+
+.navigation a::after{
+    content: '';
+ width: 100%;
+    height: 2px;
+    background: black;
+    position: absolute;
+    left:0;
+    border-radius: 5px;
+    bottom: -6px;
+    transform: scaleX(0);
+    transition: transform .5s;
+    transform-origin:right;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+    transform-origin:left;
+}
+
+.wrapper {
+    background:transparent;
+    width:400px;
+    position: relative;
+    border:2px solid rgba(255,255,255, .5);
+    backdrop-filter:blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 0 30px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    overflow: hidden;
+}
+
+.close-btn {
+    border-bottom-left-radius: 20px;
+}
+
+.wrapper .log h1{
+    font-size: 2rem;
+    color: #162938;
+    text-align: center; 
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    background: none;
+    height: 50px;
+    border-bottom:2px solid #162938;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top:50%;
+    left: 5px;
+    transform:translateY(-50%);
+    font-size:1rem;
+    color:#162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top:-5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size:1rem;
+    font-weight: 500;
+    padding:0 35px 0 5px;
+}
+
+.input-box .icon{
+    position:absolute;
+    right:8px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size:1.2rem;
+    
+}
+
+.remember-forgot {
+    font-size: .9rem;
+    color:#162938;
+    font-weight: 500;
+    margin:-15px 0 15px 0;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.remember-forgot label input {
+    accent-color:#162938;
+    margin-right: 3px;
+}
+
+.remember-forgot  a{
+    color:#162938;
+    text-decoration: none;
+    font-weight: 500;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size:1rem;
+}
+
+.login-register {
+    color:#162938;
+    text-align: center;
+    font-size:.9rem;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color:#162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration:underline;
+}
+ 
+.close-btn {
+ position: absolute;
+    top:0; 
+    right:0;
+    width:45px;
+    height: 45px;
+    background:#162938;
+    font-size:2rem;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
